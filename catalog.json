@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "mac-studio",
+      "title": "Mac Studio",
+      "readme": "models/mac-studio/README.md",
+      "manifest": "models/mac-studio/asset.json"
+    },
+    {
+      "id": "force-touch",
+      "title": "ForceTouch",
+      "readme": "models/force-touch/README.md",
+      "manifest": "models/force-touch/asset.json"
+    },
+    {
+      "id": "roadster",
+      "title": "Roadster",
+      "readme": "models/roadster/README.md",
+      "manifest": "models/roadster/asset.json"
+    },
+    {
+      "id": "camera-optics",
+      "title": "手机摄像头与光学",
+      "readme": "models/camera-optics/README.md",
+      "manifest": "models/camera-optics/asset.json"
+    },
+    {
+      "id": "3d-printer",
+      "title": "3D 打印机与运动机构",
+      "readme": "models/3d-printer/README.md",
+      "manifest": "models/3d-printer/asset.json"
+    }
+  ]
+}
