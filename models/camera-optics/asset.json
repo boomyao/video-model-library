@@ -1,10 +1,28 @@
 {
   "id": "camera-optics",
   "title": "手机摄像头与光学",
-  "status": "preparing",
-  "version": null,
-  "blender_tested": [],
-  "license": null,
-  "release_tag": null,
-  "downloads": []
+  "status": "published",
+  "version": "1.0.0",
+  "blender_tested": [
+    "5.1.2"
+  ],
+  "license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "release_tag": "camera-optics-v1.0.0",
+  "downloads": [
+    {
+      "format": "blend",
+      "filename": "camera-optics-v1.0.0-blender.zip",
+      "bytes": 9116407,
+      "sha256": "1c23523df8916476279f2d9cf0dce8ffed7ee58aec93fdc0dc18b64333eae234",
+      "url": "https://github.com/boomyao/video-model-library/releases/download/camera-optics-v1.0.0/camera-optics-v1.0.0-blender.zip"
+    }
+  ],
+  "files": [
+    "start.blend",
+    "cutaway.blend",
+    "phone.blend",
+    "lens-rays.blend"
+  ],
+  "third_party_notes": "SOURCES.md"
 }

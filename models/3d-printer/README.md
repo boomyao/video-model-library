@@ -1,32 +1,41 @@
 # 3D 打印机与运动机构
 
-状态：整理中。尚未提供正式模型包、源码或预览。
+![模型预览](previews/start.png)
 
-## 这组包含什么
+通用打印机整机、喷头、打印床、皮带传动、拖链、料盘和步进电机剖面；各部分可以拆出复用。
 
-打印机整机、横梁、喷头、皮带、皮带轮、打印床、步进电机及其剖面。
+**[下载 Blender 模型包 · v1.0.0 · 19.01 MiB](https://github.com/boomyao/video-model-library/releases/download/3d-printer-v1.0.0/3d-printer-v1.0.0-blender.zip)** · [版本说明](https://github.com/boomyao/video-model-library/releases/tag/3d-printer-v1.0.0)
 
-## 下载与使用
+测试版本：**Blender 5.1.2**；其他版本未测试。解压整个文件夹后打开 start.blend，无需 Git 或 Python。
 
-模型下载：待发布。Blender 测试版本、包体积和使用许可：待确认。
-发布后这里直接列出 Blender 下载包、预览图和三步使用方法；无需先阅读建模源码。
-通用格式和大型演示场景只有在完成导出验证后才列出。
+| 文件 | 内容 |
+| --- | --- |
+| start.blend | 打印机整机 |
+| gantry.blend | 横梁、喷头与传动机构 |
+| stepper-cutaway.blend | 步进电机剖切 |
 
-## 建模源码
+start.blend 为整机，gantry.blend 为运动机构，stepper-cutaway.blend 为电机剖面。单位为毫米（1 Blender 单位 = 1 mm）；与其他包合并时保留或正确换算单位。源码整机.整机().pose(x=...,y=...,z=...) 控制喷头姿态；动画需对相关物体写入关键帧或从脚本逐帧生成。
 
-src/ 放建模模块及必需数据；examples/ 放独立建模或运动示例；previews/ 放封面及细节图。
-具体迁移提示见 [src/README.md](src/README.md)。
+ASSET 集合包含模型，STUDIO 包含摄影机与灯光。跨项目使用可通过 File → Append 导入 ASSET 集合。
 
-## 整理清单
+## 源码与复现
 
-从生成脚本导出整机与独立零件；记录毫米单位及运动接口；另列下载的 Benchy、Voron、Jubilee 等参考资产，不自动装入默认包。
+建模入口：[src/build.py](src/build.py)。从仓库根目录运行：
 
-## 模型说明
+```sh
+blender -b --factory-startup --disable-autoexec --python models/3d-printer/src/build.py -- --out build/3d-printer --render
+```
 
-这里是用于视频演示的打印机模型，并不等于可制造或可直接打印的机械设计文件。
+Blender 自带 bpy 与 NumPy。`--render` 可省略以只生成模型；输出目录由你指定。代码依赖仓库 tools/release_scene.py，请保留整个仓库的目录层级。
 
-## 来源与许可
+本版本已从独立目录重新打开并检查模型、材质依赖、集合导入；预览为实际 Blender 渲染。
 
-见 [SOURCES.md](SOURCES.md) 和 [许可状态](../../licenses/README.md)。正式发布时填写本组各文件的许可范围。
+## 范围与许可
 
-[回到素材目录](../../README.md)
+用于视频讲解的可视化模型，不是可直接制造、安装或打印的工程图纸。此版不带完整视频运动及切片工具路径。
+
+原创模型和材质：CC BY 4.0；原创代码：MIT。[来源和第三方例外](SOURCES.md) · [完整许可](../../licenses/README.md)。
+
+建议署名：模型：boomyao / video-model-library，https://github.com/boomyao/video-model-library，CC BY 4.0；修改：注明你的修改。
+
+[返回全部素材](../../README.md)

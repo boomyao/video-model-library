@@ -1,0 +1,74 @@
+[
+  {
+    "file": "3d-printer-v1.0.0-blender/gantry.blend",
+    "meshes": 97,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "3d-printer-v1.0.0-blender/start.blend",
+    "meshes": 283,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "3d-printer-v1.0.0-blender/stepper-cutaway.blend",
+    "meshes": 68,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "camera-optics-v1.0.0-blender/cutaway.blend",
+    "meshes": 34,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "camera-optics-v1.0.0-blender/lens-rays.blend",
+    "meshes": 10,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "camera-optics-v1.0.0-blender/phone.blend",
+    "meshes": 56,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "camera-optics-v1.0.0-blender/start.blend",
+    "meshes": 35,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "force-touch-v1.0.0-blender/start.blend",
+    "meshes": 126,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "mac-studio-v1.0.0-blender/cutaway.blend",
+    "meshes": 130,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "mac-studio-v1.0.0-blender/exploded.blend",
+    "meshes": 130,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "mac-studio-v1.0.0-blender/start.blend",
+    "meshes": 130,
+    "append_ok": true,
+    "errors": []
+  },
+  {
+    "file": "roadster-v1.0.0-blender/start.blend",
+    "meshes": 135,
+    "append_ok": true,
+    "errors": []
+  }
+]

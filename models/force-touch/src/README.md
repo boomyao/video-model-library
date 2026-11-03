@@ -1,7 +1,7 @@
-# 源码迁入位置
+# 建模源码
 
-尚未迁入源码。
+从仓库根目录运行 `blender -b --factory-startup --disable-autoexec --python models/force-touch/src/build.py -- --out build/force-touch --render`。
 
-lib/ 中实际用到的模块及其 assets/、tex/ 依赖。核心入口包括 module.py、ft_scene.py；不要把渲染农场、配音时间线或整个视频工程作为默认依赖。
+测试于 Blender 5.1.2。保留 tools/ 和当前 src/ 下的相对目录。模型生成不连接网络、不依赖原视频工程。
 
-目标：能从该主题源码独立生成模型，不依赖私人机器、视频配音服务或未随包提供的数据。
+打开 start.blend，时间线为 1–48 帧、24 fps。按空格播放，模组在第 15 帧发生位移，第 20 帧回到原位。该动画用于观察动作，不代表真实震动时序。源码 module.build_module(gap=0.3, floor=False) 可单独生成主体。

@@ -1,12 +1,11 @@
-# 许可待确定
+# 使用许可
 
-作者尚未确认最终公开许可。本骨架不宣称任何已有模型或代码已经获得统一开源授权。
+作者已于 2026-11-03 确认采用以下许可：
 
-正式发布时分别明确：
+- 原创建模代码和使用文档：MIT，见 [CODE-LICENSE.txt](CODE-LICENSE.txt)。
+- 原创模型、程序化材质和预览图：CC BY 4.0，见 [MODEL-LICENSE.txt](MODEL-LICENSE.txt)。
+- 第三方素材、标志及来源数据的权利范围见各主题 SOURCES.md，不因随仓库分发而改变。
 
-- 自有建模源码的许可，放 CODE-LICENSE.txt。
-- 自有模型和贴图的许可，放 MODEL-LICENSE.txt。
-- 第三方文件保留原许可，并在各主题 SOURCES.md 列明适用范围。
+署名示例：模型：boomyao / video-model-library，https://github.com/boomyao/video-model-library，CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）；修改：填写你实际做的修改。
 
-若选择源码 MIT、原创模型 CC BY 4.0，应在确认范围后加入完整许可文本；这只是待选择的方案，尚未采用。
-标志、产品名称、专利数据来源以及示意结构，在模型说明中分别说明；不要用一个仓库许可覆盖所有第三方内容。
+CC BY 4.0 允许在遵守署名等条件的情况下修改、商业使用和再分发。许可不授予专利或商标权，也不表示相关厂商背书。

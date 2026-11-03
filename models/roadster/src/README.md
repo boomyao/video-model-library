@@ -1,7 +1,7 @@
-# 源码迁入位置
+# 建模源码
 
-尚未迁入源码。
+从仓库根目录运行 `blender -b --factory-startup --disable-autoexec --python models/roadster/src/build.py -- --out build/roadster --render`。
 
-car2.py、car_interior.py、car_mats.py、lib_rog.py 等实际依赖；完整依赖需在提取时确认。车辆模型入口与电影镜头构建入口分别提供。
+测试于 Blender 5.1.2。保留 tools/ 和当前 src/ 下的相对目录。模型生成不连接网络、不依赖原视频工程。
 
-目标：能从该主题源码独立生成模型，不依赖私人机器、视频配音服务或未随包提供的数据。
+打开 start.blend。ASSET/Vehicle 内保留独立零件和原始命名，可隐藏车身面板查看内饰及结构。修改材质可在源码 car_mats.py 中进行；build.py 生成静态可编辑车辆。

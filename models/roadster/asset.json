@@ -1,10 +1,25 @@
 {
   "id": "roadster",
   "title": "Roadster",
-  "status": "preparing",
-  "version": null,
-  "blender_tested": [],
-  "license": null,
-  "release_tag": null,
-  "downloads": []
+  "status": "published",
+  "version": "1.0.0",
+  "blender_tested": [
+    "5.1.2"
+  ],
+  "license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "release_tag": "roadster-v1.0.0",
+  "downloads": [
+    {
+      "format": "blend",
+      "filename": "roadster-v1.0.0-blender.zip",
+      "bytes": 2985765,
+      "sha256": "d183c5b8289b9aa0b62ff7e1735e41be100e1479b1cea7911a0e92db54d828d0",
+      "url": "https://github.com/boomyao/video-model-library/releases/download/roadster-v1.0.0/roadster-v1.0.0-blender.zip"
+    }
+  ],
+  "files": [
+    "start.blend"
+  ],
+  "third_party_notes": "SOURCES.md"
 }

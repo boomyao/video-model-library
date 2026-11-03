@@ -1,10 +1,27 @@
 {
   "id": "3d-printer",
   "title": "3D 打印机与运动机构",
-  "status": "preparing",
-  "version": null,
-  "blender_tested": [],
-  "license": null,
-  "release_tag": null,
-  "downloads": []
+  "status": "published",
+  "version": "1.0.0",
+  "blender_tested": [
+    "5.1.2"
+  ],
+  "license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "release_tag": "3d-printer-v1.0.0",
+  "downloads": [
+    {
+      "format": "blend",
+      "filename": "3d-printer-v1.0.0-blender.zip",
+      "bytes": 19928344,
+      "sha256": "13b2fc5e7f6781223f139ff7efd495729df7bb426ccd8047dc0ff2634771104d",
+      "url": "https://github.com/boomyao/video-model-library/releases/download/3d-printer-v1.0.0/3d-printer-v1.0.0-blender.zip"
+    }
+  ],
+  "files": [
+    "start.blend",
+    "gantry.blend",
+    "stepper-cutaway.blend"
+  ],
+  "third_party_notes": "SOURCES.md"
 }

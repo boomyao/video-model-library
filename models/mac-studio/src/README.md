@@ -1,7 +1,7 @@
-# 源码迁入位置
+# 建模源码
 
-尚未迁入源码。
+从仓库根目录运行 `blender -b --factory-startup --disable-autoexec --python models/mac-studio/src/build.py -- --out build/mac-studio --render`。
 
-build_macstudio.py、msbuild/ 模块目录，以及建模实际读取的 assets/。先保留相对导入和资源层级，不按单个零件拆散源码。
+测试于 Blender 5.1.2。保留 tools/ 和当前 src/ 下的相对目录。模型生成不连接网络、不依赖原视频工程。
 
-目标：能从该主题源码独立生成模型，不依赖私人机器、视频配音服务或未随包提供的数据。
+start.blend 是装配状态。exploded.blend 可直接查看内部层次，cutaway.blend 可查看剖面。EXPLODE_CTRL 的 explode 自定义属性控制展开程度；保持所有依赖集合一同导入。Max/Ultra 变体和展示用集合默认隐藏，请按需启用。

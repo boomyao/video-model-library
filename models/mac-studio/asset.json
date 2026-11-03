@@ -1,10 +1,27 @@
 {
   "id": "mac-studio",
   "title": "Mac Studio",
-  "status": "preparing",
-  "version": null,
-  "blender_tested": [],
-  "license": null,
-  "release_tag": null,
-  "downloads": []
+  "status": "published",
+  "version": "1.0.0",
+  "blender_tested": [
+    "5.1.2"
+  ],
+  "license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "release_tag": "mac-studio-v1.0.0",
+  "downloads": [
+    {
+      "format": "blend",
+      "filename": "mac-studio-v1.0.0-blender.zip",
+      "bytes": 24971991,
+      "sha256": "4df2a8efa69a9d6379cf61b3aa0426fa8642be5ad865742266770a901d1285f3",
+      "url": "https://github.com/boomyao/video-model-library/releases/download/mac-studio-v1.0.0/mac-studio-v1.0.0-blender.zip"
+    }
+  ],
+  "files": [
+    "start.blend",
+    "exploded.blend",
+    "cutaway.blend"
+  ],
+  "third_party_notes": "SOURCES.md"
 }

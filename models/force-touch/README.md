@@ -1,32 +1,39 @@
 # ForceTouch
 
-状态：整理中。尚未提供正式模型包、源码或预览。
+![模型预览](previews/start.png)
 
-## 这组包含什么
+玻璃触控板、支架、弹片、应变片、线圈与磁性结构；附一段可直接播放的按压关键帧演示。
 
-触控板、支架、线圈、应变片，以及按压演示所需的辅助模型。
+**[下载 Blender 模型包 · v1.0.0 · 0.97 MiB](https://github.com/boomyao/video-model-library/releases/download/force-touch-v1.0.0/force-touch-v1.0.0-blender.zip)** · [版本说明](https://github.com/boomyao/video-model-library/releases/tag/force-touch-v1.0.0)
 
-## 下载与使用
+测试版本：**Blender 5.1.2**；其他版本未测试。解压整个文件夹后打开 start.blend，无需 Git 或 Python。
 
-模型下载：待发布。Blender 测试版本、包体积和使用许可：待确认。
-发布后这里直接列出 Blender 下载包、预览图和三步使用方法；无需先阅读建模源码。
-通用格式和大型演示场景只有在完成导出验证后才列出。
+| 文件 | 内容 |
+| --- | --- |
+| start.blend | 触控板模组及按压关键帧 |
 
-## 建模源码
+打开 start.blend，时间线为 1–48 帧、24 fps。按空格播放，模组在第 15 帧发生位移，第 20 帧回到原位。该动画用于观察动作，不代表真实震动时序。源码 module.build_module(gap=0.3, floor=False) 可单独生成主体。
 
-src/ 放建模模块及必需数据；examples/ 放独立建模或运动示例；previews/ 放封面及细节图。
-具体迁移提示见 [src/README.md](src/README.md)。
+ASSET 集合包含模型，STUDIO 包含摄影机与灯光。跨项目使用可通过 File → Append 导入 ASSET 集合。
 
-## 整理清单
+## 源码与复现
 
-从 v4 的模型生成模块导出可直接打开的 Blender 文件；手部模型与贴图单独核对来源；演示运动若依赖 Python 回调，须烘焙为关键帧或保留独立运行入口。
+建模入口：[src/build.py](src/build.py)。从仓库根目录运行：
 
-## 模型说明
+```sh
+blender -b --factory-startup --disable-autoexec --python models/force-touch/src/build.py -- --out build/force-touch --render
+```
 
-区分触控板主体、可选的手部演示素材和第三方基础网格。第三方许可保持原样。
+Blender 自带 bpy 与 NumPy。`--render` 可省略以只生成模型；输出目录由你指定。代码依赖仓库 tools/release_scene.py，请保留整个仓库的目录层级。
 
-## 来源与许可
+本版本已从独立目录重新打开并检查模型、材质依赖、集合导入；预览为实际 Blender 渲染。
 
-见 [SOURCES.md](SOURCES.md) 和 [许可状态](../../licenses/README.md)。正式发布时填写本组各文件的许可范围。
+## 范围与许可
 
-[回到素材目录](../../README.md)
+第一版只包含触控板主体，不包含手部网格、手指贴图、桌面和原片剪辑。实际气隙及结构部分按原工程的说明作示意。
+
+原创模型和材质：CC BY 4.0；原创代码：MIT。[来源和第三方例外](SOURCES.md) · [完整许可](../../licenses/README.md)。
+
+建议署名：模型：boomyao / video-model-library，https://github.com/boomyao/video-model-library，CC BY 4.0；修改：注明你的修改。
+
+[返回全部素材](../../README.md)

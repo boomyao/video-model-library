@@ -1,32 +1,42 @@
 # 手机摄像头与光学
 
-状态：整理中。尚未提供正式模型包、源码或预览。
+![模型预览](previews/cutaway.png)
 
-## 这组包含什么
+八片镜片、摄像头模组、传感器、手机外形，以及计算得到的光线路径；完整和剖切版本分别提供。
 
-八片镜片、摄像头模组、传感器、手机外形，以及计算得到的光线路径。
+**[下载 Blender 模型包 · v1.0.0 · 8.69 MiB](https://github.com/boomyao/video-model-library/releases/download/camera-optics-v1.0.0/camera-optics-v1.0.0-blender.zip)** · [版本说明](https://github.com/boomyao/video-model-library/releases/tag/camera-optics-v1.0.0)
 
-## 下载与使用
+测试版本：**Blender 5.1.2**；其他版本未测试。解压整个文件夹后打开 start.blend，无需 Git 或 Python。
 
-模型下载：待发布。Blender 测试版本、包体积和使用许可：待确认。
-发布后这里直接列出 Blender 下载包、预览图和三步使用方法；无需先阅读建模源码。
-通用格式和大型演示场景只有在完成导出验证后才列出。
+| 文件 | 内容 |
+| --- | --- |
+| start.blend | 完整摄像头模组 |
+| cutaway.blend | 模组剖切 |
+| phone.blend | 手机外形与摄像头 |
+| lens-rays.blend | 镜片剖面与光线路径 |
 
-## 建模源码
+start.blend 为完整模组；cutaway.blend 看内部结构；phone.blend 为手机外形；lens-rays.blend 查看镜片与光线。源码 Module.focus(mm) 与 Module.shift(x_mm,y_mm) 可控制对焦及平移，本版场景保持静态，不依赖逐帧回调。
 
-src/ 放建模模块及必需数据；examples/ 放独立建模或运动示例；previews/ 放封面及细节图。
-具体迁移提示见 [src/README.md](src/README.md)。
+ASSET 集合包含模型，STUDIO 包含摄影机与灯光。跨项目使用可通过 File → Append 导入 ASSET 集合。
 
-## 整理清单
+## 源码与复现
 
-准备完整镜头、剖切镜头和模组的独立 Blender 场景；随源码保留镜头数据及其生成方法；模型说明列明真实比例和展示放大比例。
+建模入口：[src/build.py](src/build.py)。从仓库根目录运行：
 
-## 模型说明
+```sh
+blender -b --factory-startup --disable-autoexec --python models/camera-optics/src/build.py -- --out build/camera-optics --render
+```
 
-镜片按 US10302915B2 第 1 实施例数据重建；模组外壳、马达、手机等包含示意设计。保留数据来源，不把可视化模型表述为制造授权。
+Blender 自带 bpy 与 NumPy。`--render` 可省略以只生成模型；输出目录由你指定。代码依赖仓库 tools/release_scene.py，请保留整个仓库的目录层级。
 
-## 来源与许可
+本版本已从独立目录重新打开并检查模型、材质依赖、集合导入；预览为实际 Blender 渲染。
 
-见 [SOURCES.md](SOURCES.md) 和 [许可状态](../../licenses/README.md)。正式发布时填写本组各文件的许可范围。
+## 范围与许可
 
-[回到素材目录](../../README.md)
+镜片来自专利第 1 实施例；其余模组、马达和手机包括示意几何。光线为计算路径的可视化，不是完整波动光学仿真，也不是制造图纸。
+
+原创模型和材质：CC BY 4.0；原创代码：MIT。[来源和第三方例外](SOURCES.md) · [完整许可](../../licenses/README.md)。
+
+建议署名：模型：boomyao / video-model-library，https://github.com/boomyao/video-model-library，CC BY 4.0；修改：注明你的修改。
+
+[返回全部素材](../../README.md)

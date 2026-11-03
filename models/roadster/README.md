@@ -1,32 +1,39 @@
 # Roadster
 
-状态：整理中。尚未提供正式模型包、源码或预览。
+![模型预览](previews/start.png)
 
-## 这组包含什么
+从原工程较新的 car2.py 重建的车辆：外壳、车轮、内饰、底盘、气瓶、管路及喷嘴结构。
 
-车身、内饰、底盘、喷嘴，以及视频演示使用的相关结构。
+**[下载 Blender 模型包 · v1.0.0 · 2.85 MiB](https://github.com/boomyao/video-model-library/releases/download/roadster-v1.0.0/roadster-v1.0.0-blender.zip)** · [版本说明](https://github.com/boomyao/video-model-library/releases/tag/roadster-v1.0.0)
 
-## 下载与使用
+测试版本：**Blender 5.1.2**；其他版本未测试。解压整个文件夹后打开 start.blend，无需 Git 或 Python。
 
-模型下载：待发布。Blender 测试版本、包体积和使用许可：待确认。
-发布后这里直接列出 Blender 下载包、预览图和三步使用方法；无需先阅读建模源码。
-通用格式和大型演示场景只有在完成导出验证后才列出。
+| 文件 | 内容 |
+| --- | --- |
+| start.blend | 车辆与内部结构 |
 
-## 建模源码
+打开 start.blend。ASSET/Vehicle 内保留独立零件和原始命名，可隐藏车身面板查看内饰及结构。修改材质可在源码 car_mats.py 中进行；build.py 生成静态可编辑车辆。
 
-src/ 放建模模块及必需数据；examples/ 放独立建模或运动示例；previews/ 放封面及细节图。
-具体迁移提示见 [src/README.md](src/README.md)。
+ASSET 集合包含模型，STUDIO 包含摄影机与灯光。跨项目使用可通过 File → Append 导入 ASSET 集合。
 
-## 整理清单
+## 源码与复现
 
-现有 roadster_opening.blend 约 3.85 MiB，修改时间早于 car2.py，需核对最终版本；分离车辆本体与大型环境、特效和模拟缓存。
+建模入口：[src/build.py](src/build.py)。从仓库根目录运行：
 
-## 模型说明
+```sh
+blender -b --factory-startup --disable-autoexec --python models/roadster/src/build.py -- --out build/roadster --render
+```
 
-明确标注概念与示意结构；不要把视频中设想的结构描述为量产车官方设计。
+Blender 自带 bpy 与 NumPy。`--render` 可省略以只生成模型；输出目录由你指定。代码依赖仓库 tools/release_scene.py，请保留整个仓库的目录层级。
 
-## 来源与许可
+本版本已从独立目录重新打开并检查模型、材质依赖、集合导入；预览为实际 Blender 渲染。
 
-见 [SOURCES.md](SOURCES.md) 和 [许可状态](../../licenses/README.md)。正式发布时填写本组各文件的许可范围。
+## 范围与许可
 
-[回到素材目录](../../README.md)
+视频中的概念及特技示意车辆，不是官方生产 CAD。此版不含原片赛道、烟雾、喷气模拟缓存或完整驾驶动画。
+
+原创模型和材质：CC BY 4.0；原创代码：MIT。[来源和第三方例外](SOURCES.md) · [完整许可](../../licenses/README.md)。
+
+建议署名：模型：boomyao / video-model-library，https://github.com/boomyao/video-model-library，CC BY 4.0；修改：注明你的修改。
+
+[返回全部素材](../../README.md)

@@ -1,7 +1,7 @@
-# 源码迁入位置
+# 建模源码
 
-尚未迁入源码。
+从仓库根目录运行 `blender -b --factory-startup --disable-autoexec --python models/camera-optics/src/build.py -- --out build/camera-optics --render`。
 
-画面/lib/ 的 lens.py、module.py、phone.py 及实际依赖；画面/assets/lens_US10302915_e1.json；工具/lens_trace.py、optics_data.py。必须维护或显式修改数据加载的相对路径。
+测试于 Blender 5.1.2。保留 tools/ 和当前 src/ 下的相对目录。模型生成不连接网络、不依赖原视频工程。
 
-目标：能从该主题源码独立生成模型，不依赖私人机器、视频配音服务或未随包提供的数据。
+start.blend 为完整模组；cutaway.blend 看内部结构；phone.blend 为手机外形；lens-rays.blend 查看镜片与光线。源码 Module.focus(mm) 与 Module.shift(x_mm,y_mm) 可控制对焦及平移，本版场景保持静态，不依赖逐帧回调。

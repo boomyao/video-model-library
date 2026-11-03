@@ -1,10 +1,25 @@
 {
   "id": "force-touch",
   "title": "ForceTouch",
-  "status": "preparing",
-  "version": null,
-  "blender_tested": [],
-  "license": null,
-  "release_tag": null,
-  "downloads": []
+  "status": "published",
+  "version": "1.0.0",
+  "blender_tested": [
+    "5.1.2"
+  ],
+  "license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "release_tag": "force-touch-v1.0.0",
+  "downloads": [
+    {
+      "format": "blend",
+      "filename": "force-touch-v1.0.0-blender.zip",
+      "bytes": 1014637,
+      "sha256": "0e8facb519951e1ecffc888cb514acc3b6b05f532dc5d61f0113c1ada9d6ea7e",
+      "url": "https://github.com/boomyao/video-model-library/releases/download/force-touch-v1.0.0/force-touch-v1.0.0-blender.zip"
+    }
+  ],
+  "files": [
+    "start.blend"
+  ],
+  "third_party_notes": "SOURCES.md"
 }
